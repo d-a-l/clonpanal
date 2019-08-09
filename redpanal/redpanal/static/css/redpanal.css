@@ -174,10 +174,13 @@ h3.sign-up a:hover {
 }
 
 /* -- */
+.clear-both {
+   clear: both;
+}
 
 .form-block {
     background-color: #F0FEC0;
-    clear: both;
+    
     color: #263E4E;
     float: right;
     margin: 0 0 40px;
@@ -2217,19 +2220,21 @@ input[type="text"].search_input { /* search input in search page */
    min-height:950px;
 }
 
+#iframe-wrapper {
+   float: left;
+}
+
 #iframe-top, #login-iframe, #iframe-bottom {
-    position: absolute;
     width: 470px;
 }
 
 #iframe-bottom {
-    top: 992px;
 }
 
 #iframe-top {
     border-bottom: 1px solid #ddd;
     padding-bottom: 6px;
-    top: 126px;
+
 }
 
 #iframe-top .expl {

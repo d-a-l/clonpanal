@@ -11,12 +11,13 @@
 
 {% block content %}
 
-<div id="iframe-top"><p class="expl">{% trans "Last activities in RedPanal" %}</p></div>
+<div id="iframe-wrapper">
+   <div id="iframe-top"><p class="expl">{% trans "Last activities in RedPanal" %}</p></div>
  
-<iframe id="login-iframe" class="" src="/live/iframe"></iframe> 
+   <iframe id="login-iframe" class="" src="/live/iframe"></iframe> 
 
-<div id="iframe-bottom"><span class="more"><a href="{% url 'activity-all' %}">{% trans "more..." %}</a></span></div>
-
+   <div id="iframe-bottom"><span class="more"><a href="{% url 'activity-all' %}">{% trans "more..." %}</a></span></div>
+</div>
 <h3 class="sign-up"><a href="/accounts/signup/">{% trans "Sign up for RedPanal" %}</a></h3>
 {# TODO: cambiar {{ signup_url }} que imprime /accounts/signup/?next=%2F y no va a edit profile despues de signup #}
 
