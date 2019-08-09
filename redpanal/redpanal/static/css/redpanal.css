@@ -2273,3 +2273,13 @@ html.all-activities-iframe {
 .all-activities-iframe .action-stream button.btn-link:hover {
    color: white;
 }
+
+/* bloque top sin loguearse para lo que pinte */
+
+#para_lo_que_pinte {
+	background-color: black;
+	padding: 31px 0 20px;
+	font-size: 20px;
+	line-height: 130%;
+}
+
