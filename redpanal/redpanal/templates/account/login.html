@@ -9,11 +9,52 @@
 
 {% block body_class %}bkg login-with-iframe{% endblock %}
 
+{% block extra_head %}
+<style>
+#placas-wrapper {
+	background-color: #28ccea; text-align: center; margin: 50px 0; height: 342px;
+}
+#placas {
+	display: inline-block; width: 608px; height: 342px;
+	background: url(/static/img/placas/Ale.jpg) no-repeat center center / cover;
+}
+</style>
+<script>
+$(document).ready(function(){
+
+	var backgrounds = [
+		'Ale.jpg',    'Anibal.jpg', 'Anita.jpg',   'Bond.jpg',    'Esteban.jpg', 'Gabo.jpg', 
+		'Hordia.jpg', 'Iris.jpg',   'Karucha.jpg', 'Luciana.jpg', 'Mars.jpg',    'Pablo.jpg', 
+		'SAn.jpg',    'Salva.jpg',  'Xavi.jpg',	
+	];
+	
+	var i = 0;
+	function swapPlacas() {
+		//$('#placas').mouseout( function() {
+			if(++i >= backgrounds.length) i = 0;	
+			var $preload = $( '<img src="' + '/static/img/placas/' + backgrounds[i] + '">' );
+			$preload.bind( 'load', function(){
+				$('#placas').animate({ opacity: 0}, 500, function() {
+					$('#placas').css("background-image", "url('/static/img/placas/" + backgrounds[i] + "')").animate({opacity: 1},1000);
+				});
+			});
+		//});
+	}
+	setInterval(swapPlacas, 5000);
+});
+</script>
+{% endblock %}
+
 {% block para_lo_que_pinte %}
 
 <div id="para_lo_que_pinte">
-	<div class="container">
-    	<p style="color: white;">RedPanal.org es una plataforma de creación sonora y musical interactiva. Creada en 2008, su principal objetivo es potenciar la colaboración entre músicos, artistas sonoros y otros terrícolas, con el fin de crear un <a href="https://blog.redpanal.org/ecosistema-artistico-autonomo/">ecosistema de producción cultural autogestivo y solidario</a>.
+	<div id="acerca_de">
+		<div class="container">
+    		<p>RedPanal.org es una plataforma de creación sonora y musical interactiva. Creada en 2008, su principal objetivo es potenciar la colaboración entre músicos, artistas sonoros y otros terrícolas, con el fin de crear un <a href="https://blog.redpanal.org/ecosistema-artistico-autonomo/">ecosistema de producción cultural autogestivo y solidario</a>.
+		</div>
+	</div>
+	<div id="placas-wrapper">
+		<div id="placas"></div>
 	</div>
 </div>
 

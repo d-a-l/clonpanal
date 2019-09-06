@@ -2276,10 +2276,15 @@ html.all-activities-iframe {
 
 /* bloque top sin loguearse para lo que pinte */
 
-#para_lo_que_pinte {
+#para_lo_que_pinte #acerca_de {
 	background-color: black;
 	padding: 31px 0 20px;
 	font-size: 20px;
 	line-height: 130%;
+}
+
+#para_lo_que_pinte #acerca_de p{
+	margin: 0;
+	color: white;
 }
 
