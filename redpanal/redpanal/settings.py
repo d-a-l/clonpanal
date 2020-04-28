@@ -17,8 +17,8 @@ DATABASES = {
 }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
-# See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+# See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hostsq
+ALLOWED_HOSTS = [u'146.185.133.48', u'clonpanal.derechoaleer.org']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
